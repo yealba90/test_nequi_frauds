@@ -40,10 +40,7 @@ A continuación, se describen las columnas extraídas:
 
 ## Casos de uso final
 
-Se ha seleccionado el anterior dataset con el fin de realizar tablas de análisis de diferentes factores como:
-- Análisis de fraudes por hora
-- Porcentaje de fraudes por edades
-- Porcentaje de fraudes por hora
+Poner a disposición los datos de las transacciones fraudulentas en un periodo de tiempo para que un científico de datos pueda realizar un modelo analítico con el fin de ayudar a las entidades a predecir fraudes basados en los datos obtenidos.
 
 ***************************************************************************************************************************************************
 
@@ -282,15 +279,13 @@ Podemos observar como existe un porcentaje mayor de fraudes dentro de la muestra
 
 ## Recursos utilizados
 
-## S3
+- ## S3
 
-- Se implementa S3 por su facilidad de uso, disponibilidad y bajo costo
-
-El modelo de datos es almacenado en S3
+Se implementa S3 por su facilidad de uso, disponibilidad y bajo costo
 
 ![](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/img/S3.PNG)
 
-Acceso a los recursos:
+Acceso a los recursos de S3:
 
 ```python
 buffer_c = io.BytesIO()
@@ -314,6 +309,21 @@ df_titulares_csv = pd.read_csv(obj_titulares_csv['Body'], sep=";")
 obj_transaccion_csv = client_s3.get_object(Bucket= 'test-nequi-fraud', Key= 'fraud-data/datos_transaccion.csv')  
 df_transaccion_csv = pd.read_csv(obj_transaccion_csv['Body'], sep=";") 
 ```
+- ## PYTHON
+
+Se emplea el lenguaje de programación python por su facil implementación, variedad de librerias utilies como boto3 que permite trabajar con AWS S3, psycopg2 que permite trabajar con AWS RDS
+
+- ## RDS
+
+Se trabaja con RDS por su accesibilidad y facilidad de manejo, además de integración con otros servicios de AWS.
+
+Por medio del entorno Postgresql, se crean las tablas requeridas en las DB de RDS
+
+- ## POSTGRESQL
+
+- Se emplea un modelo de datos relacional basado en postgreSQL ya que permite un gran alcance de consultas, integridad en los datos y fácil manejo de entorno.
+
+![](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/img/create_tables.JPG)
 
 ## MER
 
@@ -323,15 +333,7 @@ df_transaccion_csv = pd.read_csv(obj_transaccion_csv['Body'], sep=";")
 
 ![](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/img/diccionario.PNG)
 
-- Se trabaja con RDS por su accesibilidad y facilidad de manejo, además de integración con otros servicios de AWS.
-
-- Se emplea un modelo de datos relacional basado en postgreSQL ya que permite un gran alcance de consultas, integridad en los datos y fácil manejo de entorno.
-
-![](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/img/create_tables.JPG)
-
-![](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/img/Join_row.JPG)
-
-# Frecuencia de actualización
+## Frecuencia de actualización
 
 Teniendo en cuenta la importancia de los datos a nivel financiero, se propone una actualización mensual con el fin de evidenciar un posible crecimiento o decrecimiento.
 
@@ -522,7 +524,11 @@ engine.close()
 ```
 ## Transformar
 
-Teniendo en cuenta que los datos ya fueron cargados en DB de RDS, por medio de postgresql se realiza la transnformación de de los datos.
+Teniendo en cuenta que los datos ya fueron cargados en DB de RDS basada en postgresql, se realiza un join. 
+
+![](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/img/Join_row.JPG)
+
+Luego se realiza una transformacion de datos.
 
 [tranformacion_datos.sql](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/code/tranformacion_datos.sql)
 
@@ -555,7 +561,7 @@ Teniendo en cuenta el volumen de datos, se optaría por migrar a otros servicios
 
 ## 4. Si se requiere hacer analítica en tiempo real, ¿cuales componentes cambiaria a su arquitectura propuesta?
 
-- Se podría implementar un servicio de AWS KINESIS con el fin de realiza 
+- Se podría implementar un servicio de AWS KINESIS con el fin de realizar análitica de datos en tiempo real con servicios streaming
 
 ## Muchas Gracias
 
