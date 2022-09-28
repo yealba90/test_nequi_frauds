@@ -49,8 +49,7 @@ Se ha seleccionado el anterior dataset con el fin de realizar tablas de análisi
 
 # 2. Explorar y evaluar los datos, EDA.
 
-[eda_nequi_test_fraud.ipynb]
-(https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/code/eda_nequi_test_fraud.ipynb)
+[eda_nequi_test_fraud.ipynb](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/code/eda_nequi_test_fraud.ipynb)
 
 
 ## Para iniciar con la exploracion de datos, vamos a visualizar algunas estadisticas
@@ -340,8 +339,7 @@ Teniendo en cuenta la importancia de los datos a nivel financiero, se propone un
 
 # 4. Extraer, cargar y transformar datos, el ETL
 
-[etl_test_nequi-original-y.ipynb]
-(https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/code/etl_test_nequi-original-y.ipynb)
+[etl_test_nequi-original-y.ipynb](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/code/etl_test_nequi-original-y.ipynb)
 
 ## Extracción
 
@@ -526,8 +524,7 @@ engine.close()
 
 Teniendo en cuenta que los datos ya fueron cargados en DB de RDS, por medio de postgresql se realiza la transnformación de de los datos.
 
-[tranformacion_datos.sql]
-(https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/code/tranformacion_datos.sql)
+[tranformacion_datos.sql](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/code/tranformacion_datos.sql)
 [![](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/img/datos_fraude_transformada.JPG)]
 
 Se emplean algunos metodos SQL con el fin de crear columnas que puedan ser utilizadas para otros procesos posteriores.
