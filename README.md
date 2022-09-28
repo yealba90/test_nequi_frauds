@@ -277,7 +277,7 @@ Podemos observar como existe un porcentaje mayor de fraudes dentro de la muestra
 # 3. Modelo de datos
 
 - Arquitectura
-- **AGREGAR ENLACE DE IMAGEN arquitectura**
+![](https://github.com/yealba90/test_nequi_frauds/blob/9135f721f2b783e1cecb00b7c346e12ed7f70749/img/arquitectura.JPG)
 
 ## Recursos utilizados
 
