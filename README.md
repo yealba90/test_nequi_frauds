@@ -156,7 +156,7 @@ N de transaciones NaN: 0
 N de transaciones vacias: 0
 ```
 
-# Teniendo en cuenta los resultados de estadísticas y cálculos, podemos realizar un análisis de datos:
+## Teniendo en cuenta los resultados de estadísticas y cálculos, podemos realizar un análisis de datos:
 
 ```python
 print('Cantidad de fraudes: 1')
@@ -203,7 +203,7 @@ plt.legend()
 plt.show()
 ```
 
-[![](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/img/analisis_fraude_por_hora.JPG)]
+![](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/img/analisis_fraude_por_hora.JPG)
 
 Podemos observar que la mayor cantidad de fraudes realizados a partir de la muestra, se dan entre las 22 y 23 horas.
 
@@ -234,7 +234,7 @@ plt.legend()
 plt.show()
 ```
 
-[![](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/img/analisis_porcentaje_fraude_por_hora_pie.JPG)]
+![](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/img/analisis_porcentaje_fraude_por_hora_pie.JPG)
 
 Según la anterior grafica se puede concluir que el más del 84% de los fraudes se realiza entre las 22 pm y las 3 am
 
@@ -268,7 +268,7 @@ plt.legend()
 plt.show()
 ```
 
-[![](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/img/analisis_porcentaje_edades_fraude.JPG)]
+![](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/img/analisis_porcentaje_edades_fraude.JPG)
 
 Podemos observar como existe un porcentaje mayor de fraudes dentro de la muestra que corresponde a personas jovenes.
 
@@ -287,7 +287,7 @@ Podemos observar como existe un porcentaje mayor de fraudes dentro de la muestra
 
 El modelo de datos es almacenado en S3
 
-[![](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/img/S3.PNG)]
+![](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/img/S3.PNG)
 
 Acceso a los recursos:
 
@@ -316,20 +316,19 @@ df_transaccion_csv = pd.read_csv(obj_transaccion_csv['Body'], sep=";")
 
 ## MER
 
-[![](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/img/modelo_de_datos.PNG)]
+![](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/img/modelo_de_datos.PNG)
 
 - Diccionario de datos
-[![](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/img/diccionario.PNG)]
+
+![](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/img/diccionario.PNG)
 
 - Se trabaja con RDS por su accesibilidad y facilidad de manejo, además de integración con otros servicios de AWS.
 
 - Se emplea un modelo de datos relacional basado en postgreSQL ya que permite un gran alcance de consultas, integridad en los datos y fácil manejo de entorno.
 
-[![](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/img/create_tables.JPG)]
-- **AGREGAR ENLACE DE IMAGEN create_tables.JPG**
+![](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/img/create_tables.JPG)
 
-[![](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/img/Join_row.JPG)]
-- **AGREGAR ENLACE DE IMAGEN Join_row.JPG**
+![](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/img/Join_row.JPG)
 
 # Frecuencia de actualización
 
@@ -525,7 +524,8 @@ engine.close()
 Teniendo en cuenta que los datos ya fueron cargados en DB de RDS, por medio de postgresql se realiza la transnformación de de los datos.
 
 [tranformacion_datos.sql](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/code/tranformacion_datos.sql)
-[![](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/img/datos_fraude_transformada.JPG)]
+
+![](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/img/datos_fraude_transformada.JPG)
 
 Se emplean algunos metodos SQL con el fin de crear columnas que puedan ser utilizadas para otros procesos posteriores.
 
