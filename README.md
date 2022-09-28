@@ -323,7 +323,7 @@ Por medio del entorno Postgresql, se crean las tablas requeridas en las DB de RD
 
 - Se emplea un modelo de datos relacional basado en postgreSQL ya que permite un gran alcance de consultas, integridad en los datos y fácil manejo de entorno.
 
-[create_tables(https://github.com/yealba90/test_nequi_frauds/blob/c7dcc8da13f12ff6d1711e2c7ccd808ab24e24e6/code/create_tables.sql)
+[create_tables](https://github.com/yealba90/test_nequi_frauds/blob/c7dcc8da13f12ff6d1711e2c7ccd808ab24e24e6/code/create_tables.sql)
 
 ![](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/img/create_tables.JPG)
 
