@@ -323,6 +323,8 @@ Por medio del entorno Postgresql, se crean las tablas requeridas en las DB de RD
 
 - Se emplea un modelo de datos relacional basado en postgreSQL ya que permite un gran alcance de consultas, integridad en los datos y fácil manejo de entorno.
 
+[create_tables(https://github.com/yealba90/test_nequi_frauds/blob/c7dcc8da13f12ff6d1711e2c7ccd808ab24e24e6/code/create_tables.sql)
+
 ![](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/img/create_tables.JPG)
 
 ## MER
@@ -341,7 +343,7 @@ Teniendo en cuenta la importancia de los datos a nivel financiero, se propone un
 
 # 4. Extraer, cargar y transformar datos, el ETL
 
-[etl_test_nequi-original-y.ipynb](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/code/etl_test_nequi-original-y.ipynb)
+[etl_test_nequi-original-y.ipynb](https://github.com/yealba90/test_nequi_frauds/blob/c7dcc8da13f12ff6d1711e2c7ccd808ab24e24e6/code/etl_test_nequi-original-y.ipynb)
 
 ## Extracción
 
@@ -525,6 +527,10 @@ engine.close()
 ## Transformar
 
 Teniendo en cuenta que los datos ya fueron cargados en DB de RDS basada en postgresql, se realiza un join. 
+
+[create_table_public.datos_fraude_join_raw.sql](https://github.com/yealba90/test_nequi_frauds/blob/c7dcc8da13f12ff6d1711e2c7ccd808ab24e24e6/code/create%20table%20public.datos_fraude_join_raw%20.sql)
+
+
 
 ![](https://github.com/yealba90/test_nequi_frauds/blob/3b00fe8e6c17af0e5382e992729f3a6d1cf6b52d/img/Join_row.JPG)
 
